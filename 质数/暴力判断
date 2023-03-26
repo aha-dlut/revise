@@ -1,0 +1,13 @@
+//对一个数字n判断是不是质数直接暴力判断
+从2 到根号n直接如果不存在能将其整除的数，则为质数
+bool isPrime(int n){
+  if(n == 0 || n == 1){
+    return false;
+  }
+  for(int i = 2; i*i <= n; i++){
+    if(n%i == 0){
+      return false;
+    }
+  }
+  return true;
+}
